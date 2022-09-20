@@ -52,18 +52,93 @@ nav a:hover {
 /* Main Section */
 main {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   margin: 20px;
 }
 
+/* Search */
 main .search-section {
-  width: 20%;
+  max-width: 210px;
   background-color: #1b2838;
-  margin-right: 50px;
-  border: 1px solid black;
 }
 
+.search-section #store-search {
+  float: none;
+  height: 30px;
+  margin: 0px;
+  position: relative;
+}
+
+#store-search form {
+  display: block;
+  margin-top: 0px;
+}
+
+#store-search .search-box {
+  background-image: none;
+  background-color: #316282;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 0px rgb(255 255 255 / 20%);
+  color: #fff;
+  margin-bottom: 0px;
+  outline: none;
+  height: 27px;
+  padding: 0px 6px;
+  position: relative;
+}
+
+.search-box input {
+  border: none;
+  background-color: transparent;
+  color: #eeeeee;
+  /* margin-top: 2px; */
+  /* margin-left: 8px; */
+  /* width: calc(100% - 25px - 8px); */
+  outline: none;
+  /* line-height: 26px; */
+}
+
+.searchbox input.search-input {
+  color: #ebeef0;
+  font-size: 15px;
+  margin-top: 1px;
+  text-shadow: 1px 1px 0px rgb(255 255 255 / 10%);
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 300;
+}
+
+#store-search-link img {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  right: 0;
+  background-image: url(https://store.cloudflare.steamstatic.com/public/images/v6/search_icon_btn.png);
+}
+
+.search-section .category ul {
+  color: #66c0f4;
+  list-style-type: none;
+  padding-left: 0px;
+  margin-top: 1em;
+  padding-top: 1em;
+  border-top: 2px solid #316282;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.search-section .category ul li {
+  padding-bottom: 1em;
+}
+
+.search-section .category ul li:hover {
+  color: white;
+}
+
+/* Game Section */
 main .games-section {
+  margin-left: 20px;
   width: 80%;
   display: flex;
   flex-wrap: wrap;

@@ -35,60 +35,40 @@
       </nav>
     </header>
     <main>
-      <div class="search-section">Search Section</div>
-      <div class="games-section">
-        <div class="game-container">
-          <div class="cover" onclick="">
-            <img
-              src="https://cdn.akamai.steamstatic.com/steam/apps/1724320/header.jpg?t=1663333284"
-              data-id="1724320"
-            />
-            <div class="game-info">
-              <p>Noelle Does Her Best!</p>
-              <p>$16,79</p>
+      <div class="search-section">
+        <div id="store-search">
+          <form action="">
+            <div class="search-box">
+              <input
+                class="search-input"
+                type="text"
+                name="input-search"
+                placeholder="Search..."
+                autocomplete="off"
+                max-length="64"
+                size="22"
+              />
             </div>
-          </div>
+            <div id="store-search-link">
+              <img
+                src="https://store.cloudflare.steamstatic.com/public/images/blank.gif"
+              />
+            </div>
+          </form>
         </div>
-
-        <div class="game-container">
-          <div class="cover" onclick="">
-            <img
-              src="https://cdn.akamai.steamstatic.com/steam/apps/1724320/header.jpg?t=1663333284"
-              data-id="1724320"
-            />
-            <div class="game-info">
-              <p>Noelle Does Her Best!</p>
-              <p>$16,79</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="game-container">
-          <div class="cover" onclick="">
-            <img
-              src="https://cdn.akamai.steamstatic.com/steam/apps/1724320/header.jpg?t=1663333284"
-              data-id="1724320"
-            />
-            <div class="game-info">
-              <p>Noelle Does Her Best!</p>
-              <p>$16,79</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="game-container">
-          <div class="cover" onclick="">
-            <img
-              src="https://cdn.akamai.steamstatic.com/steam/apps/1724320/header.jpg?t=1663333284"
-              data-id="1724320"
-            />
-            <div class="game-info">
-              <p>Noelle Does Her Best!</p>
-              <p>$16,79</p>
-            </div>
-          </div>
+        <div class="category">
+          <ul class="category-group">
+            <li>Action</li>
+            <li>Casual</li>
+            <li>FPS</li>
+            <li>MMO</li>
+            <li>RPG</li>
+            <li>RTS</li>
+            <li>Sport</li>
+          </ul>
         </div>
       </div>
+      <div class="games-section"></div>
     </main>
     <footer>
       <div class="row">Authorized by Vinh Vong Hoang</div>
