@@ -1,0 +1,121 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1b2838;
+  font-family: Roboto, sans-serif;
+  font-size: 1.5rem;
+  color: #66c0f4;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+/* Header Section */
+header {
+  background-color: #171a21;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+header h3 {
+  font-size: 1rem;
+  color: #b8b6b4;
+  transition: color 1s, font-size 1s;
+}
+
+header h3:hover {
+  color: #ffffff;
+  font-size: 1.25rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #b8b6b4;
+  text-transform: uppercase;
+  margin: 10px;
+  font-size: 1rem;
+  transition: color 1s, font-size 1s;
+}
+
+nav a:hover {
+  color: #ffffff;
+  font-size: 1.25rem;
+}
+
+/* Main Section */
+main {
+  display: flex;
+  justify-content: flex-start;
+  margin: 20px;
+}
+
+main .search-section {
+  width: 20%;
+  background-color: #1b2838;
+  margin-right: 50px;
+  border: 1px solid black;
+}
+
+main .games-section {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.game-container {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 5px #000;
+  background-image: url(./images/background_spotlight.jpg);
+  width: 270px;
+}
+
+.game-container .cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.game-container .cover img {
+  object-fit: contain;
+  border: none;
+}
+
+.game-container .cover .game-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  background: linear-gradient(
+    -45deg,
+    rgba(64, 121, 153, 1) 5%,
+    rgba(42, 62, 89, 1) 95%
+  );
+  height: 35px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Footer Section */
+footer {
+  background: #171a21;
+  bottom: 0px;
+  width: 100%;
+  padding: 20px;
+  position: fixed;
+}
+
+footer .row {
+  text-align: center;
+  font-size: 1rem;
+  color: #b8b6b4;
+}
