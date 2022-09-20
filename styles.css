@@ -6,12 +6,13 @@
 
 body {
   background-color: #1b2838;
-  font-family: Roboto, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1.5rem;
   color: #66c0f4;
   margin: 0;
   padding: 0;
   height: 100vh;
+  letter-spacing: 1.25px;
 }
 
 /* Header Section */
@@ -75,6 +76,11 @@ main .games-section {
   box-shadow: 0 0 5px #000;
   background-image: url(./images/background_spotlight.jpg);
   width: 270px;
+  transition: all 0.2s ease-in-out;
+}
+
+.game-container:hover {
+  transform: scale(1.1);
 }
 
 .game-container .cover {
@@ -93,8 +99,9 @@ main .games-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: Tahoma, Arial, Helvetica, sans-serif;
-  font-size: 1rem;
+  font-family: "Motiva Sans", sans-serif;
+  color: #acdbf5;
+  font-size: 0.75rem;
   background: linear-gradient(
     -45deg,
     rgba(64, 121, 153, 1) 5%,
@@ -118,4 +125,5 @@ footer .row {
   text-align: center;
   font-size: 1rem;
   color: #b8b6b4;
+  padding: 5px;
 }
