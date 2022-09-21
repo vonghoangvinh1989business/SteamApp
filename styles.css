@@ -15,6 +15,32 @@ body {
   letter-spacing: 1.25px;
 }
 
+img {
+  border: none;
+}
+
+.responsive {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+}
+
+.tiny-info {
+  color: white;
+}
+
+.loading {
+  color: white;
+}
+
+.positive {
+  color: green;
+}
+
+.negative {
+  color: orangered;
+}
+
 /* Header Section */
 header {
   background-color: #171a21;
@@ -22,6 +48,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  width: 100%;
 }
 
 header h3 {
@@ -38,7 +65,6 @@ header h3:hover {
 nav a {
   text-decoration: none;
   color: #b8b6b4;
-  text-transform: uppercase;
   margin: 10px;
   font-size: 1rem;
   transition: color 1s, font-size 1s;
@@ -53,7 +79,7 @@ nav a:hover {
 main {
   display: flex;
   justify-content: center;
-  margin: 20px;
+  margin: 20px 0px;
 }
 
 /* Search */
@@ -84,28 +110,25 @@ main .search-section {
   margin-bottom: 0px;
   outline: none;
   height: 27px;
-  padding: 0px 6px;
   position: relative;
 }
 
 .search-box input {
+  display: block;
   border: none;
   background-color: transparent;
   color: #eeeeee;
-  /* margin-top: 2px; */
-  /* margin-left: 8px; */
-  /* width: calc(100% - 25px - 8px); */
+  width: calc(100% - 25px - 8px);
   outline: none;
-  /* line-height: 26px; */
+  line-height: 26px;
+  margin-left: 8px;
+  font-size: 0.8rem;
 }
 
 .searchbox input.search-input {
   color: #ebeef0;
-  font-size: 15px;
-  margin-top: 1px;
   text-shadow: 1px 1px 0px rgb(255 255 255 / 10%);
   font-family: "Fira Sans", sans-serif;
-  font-weight: 300;
 }
 
 #store-search-link img {
@@ -120,12 +143,12 @@ main .search-section {
 .search-section .category ul {
   color: #66c0f4;
   list-style-type: none;
-  padding-left: 0px;
   margin-top: 1em;
   padding-top: 1em;
   border-top: 2px solid #316282;
   cursor: pointer;
   font-size: 0.9rem;
+  padding: 1em 0;
 }
 
 .search-section .category ul li {
@@ -134,14 +157,15 @@ main .search-section {
 
 .search-section .category ul li:hover {
   color: white;
+  cursor: pointer;
 }
 
 /* Game Section */
 main .games-section {
-  margin-left: 20px;
   width: 80%;
   display: flex;
   flex-wrap: wrap;
+  margin-left: 20px;
 }
 
 .game-container {
@@ -150,12 +174,13 @@ main .games-section {
   margin-bottom: 10px;
   box-shadow: 0 0 5px #000;
   background-image: url(./images/background_spotlight.jpg);
-  width: 270px;
+  max-width: 270px;
   transition: all 0.2s ease-in-out;
 }
 
 .game-container:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
 
 .game-container .cover {
@@ -187,13 +212,110 @@ main .games-section {
   padding-right: 10px;
 }
 
+/* GAME DETAILS SECTION */
+.games-section .show-detail {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  height: auto;
+  flex-direction: column;
+}
+
+.show-detail .title {
+  color: white;
+  font-family: "Fira+Sans", Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  line-height: 32px;
+  text-overflow: ellipsis;
+  font-weight: normal;
+}
+
+.show-detail .price {
+  color: #acdbf5;
+  display: inline-block;
+  line-height: 16px;
+  padding: 6px 0;
+  font-size: 1rem;
+}
+
+.show-detail .infos-container {
+  max-width: 850px;
+  display: flex;
+  background-position: bottom;
+  padding: 16px;
+  margin-bottom: 8px;
+  margin-top: 10px;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+
+.show-detail .game-details .game-description {
+  max-width: 400px;
+  overflow: hidden;
+  font-size: 0.8rem;
+  line-height: 20px;
+  padding: 0 16px;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+  color: white;
+}
+
+.show-detail .game-details .game-informations {
+  font-size: 0.8rem;
+  padding: 16px;
+  min-width: 94px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #66c0f4;
+  line-height: 20px;
+}
+
+.show-detail .tags-container {
+  max-width: 850px;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  font-size: 12px;
+  padding: 16px;
+}
+
+.show-detail .tags-container .tags {
+  display: flex;
+}
+
+.show-detail .tags-container .tags .tag {
+  display: inline-block;
+  line-height: 19px;
+  padding: 0 7px;
+  color: #67c1f5;
+  background-color: rgba(103, 193, 245, 0.2);
+  border-radius: 2px;
+  cursor: pointer;
+  margin: 4px;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #67c1f5;
+}
+
 /* Footer Section */
-footer {
-  background: #171a21;
+/* footer {
+  position: absolute;
   bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: #171a21;
   width: 100%;
-  padding: 20px;
-  position: fixed;
+  padding: 0 20px;
 }
 
 footer .row {
@@ -201,4 +323,44 @@ footer .row {
   font-size: 1rem;
   color: #b8b6b4;
   padding: 5px;
+} */
+
+/* Spinner */
+/* spinner */
+#spinner:not([hidden]) {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#spinner::after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  border: 2px solid #f3f3f3;
+  border-top: 3px solid coral;
+  border-radius: 100%;
+  will-change: transform;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#loading {
+  font-size: 2rem;
+  padding: 20px;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
 }

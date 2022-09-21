@@ -27,22 +27,23 @@
           />
         </a>
       </div>
-      <h3>Best Games</h3>
+      <h3 id="display-title">Best Games</h3>
       <nav>
         <a href="#">Home</a>
         <a href="#">About</a>
-        <a href="#">Trending</a>
+        <a onclick="renderFeaturedGames()" href="#">Featured Games</a>
       </nav>
     </header>
     <main>
       <div class="search-section">
         <div id="store-search">
-          <form action="">
+          <form action="#">
             <div class="search-box">
               <input
                 class="search-input"
                 type="text"
                 name="input-search"
+                id="input-search"
                 placeholder="Search..."
                 autocomplete="off"
                 max-length="64"
@@ -70,10 +71,11 @@
       </div>
       <div class="games-section"></div>
     </main>
-    <footer>
-      <div class="row">Authorized by Vinh Vong Hoang</div>
-      <div class="row">2022</div>
-    </footer>
+
+    <!-- spinner -->
+    <div hidden id="spinner">
+      <p id="loading" class="loading">Loading data...</p>
+    </div>
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
