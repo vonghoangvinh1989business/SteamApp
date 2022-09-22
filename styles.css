@@ -20,7 +20,6 @@ img {
 }
 
 .responsive {
-  max-width: 400px;
   width: 100%;
   height: auto;
 }
@@ -135,20 +134,25 @@ main .search-section {
   position: absolute;
   width: 24px;
   height: 24px;
-  top: 0;
+  top: 2px;
   right: 0;
   background-image: url(https://store.cloudflare.steamstatic.com/public/images/v6/search_icon_btn.png);
+}
+
+.search-section .category {
+  width: 100%;
+  height: auto;
 }
 
 .search-section .category ul {
   color: #66c0f4;
   list-style-type: none;
-  margin-top: 1em;
   padding-top: 1em;
   border-top: 2px solid #316282;
   cursor: pointer;
-  font-size: 0.9rem;
-  padding: 1em 0;
+  font-size: 0.8rem;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .search-section .category ul li {
@@ -252,12 +256,19 @@ main .games-section {
   );
 }
 
+.show-detail .game-details {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  padding: 16px;
+}
+
 .show-detail .game-details .game-description {
   max-width: 400px;
-  overflow: hidden;
   font-size: 0.8rem;
-  line-height: 20px;
-  padding: 0 16px;
+  padding: 0 15px;
   word-wrap: break-word;
   text-overflow: ellipsis;
   color: white;
@@ -265,13 +276,10 @@ main .games-section {
 
 .show-detail .game-details .game-informations {
   font-size: 0.8rem;
-  padding: 16px;
+  padding: 15px;
   min-width: 94px;
-  overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
   color: #66c0f4;
-  line-height: 20px;
 }
 
 .show-detail .tags-container {
@@ -305,28 +313,7 @@ main .games-section {
   color: #67c1f5;
 }
 
-/* Footer Section */
-/* footer {
-  position: absolute;
-  bottom: 0px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  background: #171a21;
-  width: 100%;
-  padding: 0 20px;
-}
-
-footer .row {
-  text-align: center;
-  font-size: 1rem;
-  color: #b8b6b4;
-  padding: 5px;
-} */
-
 /* Spinner */
-/* spinner */
 #spinner:not([hidden]) {
   position: fixed;
   top: 0;
@@ -363,4 +350,33 @@ footer .row {
   padding: 20px;
   font-weight: bold;
   font-family: "Open Sans", sans-serif;
+}
+
+@media only screen and (max-width: 500px) {
+  img {
+    width: 50%;
+    height: 50%;
+    display: block;
+  }
+
+  .show-detail {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .game-details {
+    position: absolute;
+    top: 400px;
+  }
+
+  .show-detail .game-details .game-description {
+    display: block;
+    float: center;
+  }
+
+  .show-detail .game-details .game-informations {
+    display: block;
+    float: center;
+  }
 }

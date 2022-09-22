@@ -362,6 +362,7 @@ storeSearchLink.addEventListener("click", () => {
 
   if (inputSearchValue) {
     renderAllGames(inputSearchValue, "", "");
+    h3DisplayTitle.textContent = `Result with keyword: ${inputSearchValue}`;
   }
 });
 
@@ -372,6 +373,7 @@ inputSearch.addEventListener("keypress", (event) => {
     let inputSearchValue = inputSearch.value.toString().trim();
     if (inputSearchValue) {
       renderAllGames(inputSearchValue, "", "");
+      h3DisplayTitle.textContent = `Result with keyword: ${inputSearchValue}`;
     }
   }
 });
